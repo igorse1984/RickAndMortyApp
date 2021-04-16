@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Rick and Morty Application</string>
+    <string name="title_locations">Локации</string>
+    <string name="title_location">Локация</string>
+    <string name="title_characters">Персонажи</string>
+    <string name="title_character">Персонаж</string>
+    <string name="title_episodes">Эпизоды</string>
+    <string name="title_episode">Эпизод</string>
+</resources>

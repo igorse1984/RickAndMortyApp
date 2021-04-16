@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/locations">
+
+    <fragment
+        android:id="@+id/locations"
+        android:name="ru.igorsharov.rickandmortyapplication.ui.locations.LocationsFragment"
+        android:label="@string/title_locations"
+        tools:layout="@layout/fragment_locations">
+        <action
+            android:id="@+id/to_locationFragment"
+            app:destination="@id/locationFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/characters"
+        android:name="ru.igorsharov.rickandmortyapplication.ui.characters.CharactersFragment"
+        android:label="@string/title_characters"
+        tools:layout="@layout/fragment_characters">
+        <action
+            android:id="@+id/to_characterFragment"
+            app:destination="@id/characterFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/episodes"
+        android:name="ru.igorsharov.rickandmortyapplication.ui.episodes.EpisodesFragment"
+        android:label="@string/title_episodes"
+        tools:layout="@layout/fragment_episodes">
+        <action
+            android:id="@+id/to_episodeFragment"
+            app:destination="@id/episodeFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/characterFragment"
+        android:name="ru.igorsharov.rickandmortyapplication.ui.character.CharacterFragment"
+        android:label="CharacterFragment">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="ru.igorsharov.rickandmortyapplication.ui.location.LocationFragment"
+        android:label="LocationFragment">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/episodeFragment"
+        android:name="ru.igorsharov.rickandmortyapplication.ui.episode.EpisodeFragment"
+        android:label="EpisodeFragment">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>
